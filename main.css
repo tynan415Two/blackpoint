@@ -1,20 +1,20 @@
 
 @media screen and (max-width: 750px) {
 	body {
-		background: #141414;
+		/* background: #141414; */
 		width: 100%;
 		height: 100%;
 		padding: none;
 		margin: 0px;
 	}	
-	.ux3Mn8LKUg11IZ1F4aFw {
+	.headerImg {
 		z-index: 0;
 		width: 100%;
 		padding: inherit;
 		margin: 0px;
 		/* height: 100px; */
 	}
-	.va8OmSfBPgEGnlfWZDXK {
+	.title {
 		z-index: 1;
 		position: absolute;
 		color:black;
@@ -28,7 +28,7 @@
 		background-color: rgba(153, 153, 153, 0.5);
 	}
 
-	._Lrxk8OgsU1yNkAJq1RP {
+	.btnContainer {
 		width: 90%;
 		padding-left: 14px;
 		height: 35px;
@@ -36,28 +36,28 @@
 		align-items: center;
 		justify-content: space-around;
 	}
-	.lBDVxMs3vN5Ns0h2WOxQ {
+	.aboutSwipe {
 		font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 		font-size: 22px;
 		font-weight: 600;
 		color: darkgray;
 	}
 
-	.mwZqpoH3yfCgazF1u1Qp {
+	.photoSwipe {
 		font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 		font-size: 22px;
 		font-weight: 600;
 		color: darkgray;
 	}
 
-	.YYNQwJSre1K9_AJaOU0a {
+	.infoSwipe {
 		font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 		font-size: 22px;
 		font-weight: 600;
 		color: darkgray;
 	}
 
-	.EYkiVbMYd_WiIVddIjwn{
+	.about{
 		position: absolute;
 		margin-top: 14px;
 		margin-left: auto;

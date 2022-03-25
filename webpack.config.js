@@ -19,8 +19,7 @@ module.exports = {
             use: [
                 MiniCssExtractPlugin.loader, 
                 {
-                    loader: 'css-loader',
-                    options: { modules: true }
+                    loader: 'css-loader'
                 }
             ]
         }
@@ -32,7 +31,8 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             template: './src/index.html',
-            filename: 'index.html'
+            filename: 'index.html',
+            favicon: './src/images/goldenGate.ico',
         }), 
         new MiniCssExtractPlugin(),
     ]
