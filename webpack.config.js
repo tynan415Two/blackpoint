@@ -7,7 +7,7 @@ module.exports = {
     output: {
         filename: '[name].js',
         path: path.join(__dirname,'dist')
-      },
+    },
     devtool: 'eval-source-map',
     module: {
         rules: [
@@ -29,7 +29,7 @@ module.exports = {
                     }
                 ]
             }
-    ]
+        ]
     },
     resolve: {
         extensions: ['.js', '.ts', '.tsx']
