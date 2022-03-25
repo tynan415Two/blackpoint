@@ -9,20 +9,25 @@ module.exports = {
       },
     devtool: 'eval-source-map',
     module: {
-        rules: [{
-            test: /\.tsx?$/,
-            loader: 'babel-loader',
-            exclude: /node_modules/
-        }, 
-        {
-            test: /\.css$/,
-            use: [
-                MiniCssExtractPlugin.loader, 
-                {
-                    loader: 'css-loader'
-                }
-            ]
-        }
+        rules: [
+            {
+                test: /\.tsx?$/,
+                loader: 'babel-loader',
+                exclude: /node_modules/,
+            }, 
+            {
+                test: /\.(png|jpg|jpeg|gif)$/i,
+                type: "asset/resource",
+            },
+            {
+                test: /\.css$/,
+                use: [
+                    MiniCssExtractPlugin.loader, 
+                    {
+                        loader: 'css-loader',
+                    }
+                ]
+            }
     ]
     },
     resolve: {
