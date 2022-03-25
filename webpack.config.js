@@ -1,11 +1,11 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-
+const path = require('path')
 module.exports = {
     entry: './src/index.tsx',
     output: {
         filename: '[name].js',
-        path: __dirname,
+        path: path.join(__dirname,'dist')
       },
     devtool: 'eval-source-map',
     module: {
