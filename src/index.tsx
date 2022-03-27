@@ -16,11 +16,13 @@ const slider = document.getElementById('root')
 let selectedArr = ["about", "photo", "info"];
 let idx = 0;
 function handleGesture() {
-    if (touchendX < touchstartX && Math.abs(touchendY - touchstartY) < 10) {
+    if (touchendX < touchstartX && Math.abs(touchstartY - touchendY) < 15) {
         idx < selectedArr.length -1 ? idx++ : idx;
     }
-    if (touchendX > touchstartX && Math.abs(touchendY - touchstartY) < 10) {
+    if (touchendX > touchstartX && Math.abs(touchstartY - touchendY) < 15) {
         idx > 0 ? idx-- : idx;
+        // console.log("X: " + touchstartX, touchendX, "Y: " + touchstartY, touchendY)
+
     }
     let name = selectedArr[idx];
     let ele = document.getElementById(name)
