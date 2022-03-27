@@ -12,7 +12,7 @@ class Photos extends React.Component {
         let photos = photosArr;
     
         return( 
-            <ul className="photos">
+            <ul className="photos" id="Photos">
                 {photos.map((photo: string, i: number) => <li key={i}><img className="photo" src={photo}></img></li>)}
             </ul>
         )

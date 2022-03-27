@@ -65,9 +65,6 @@
 	.about{
 		box-sizing: border-box;
 		margin: 14px auto;
-		
-		left: 0;
-		right: 0;
 		padding: 8px;
 		text-align: center;	
 		line-height: 200%;	

@@ -8,7 +8,7 @@ class About extends React.Component {
     }
     render() {
         return( 
-        <section className="about">
+        <section className="about" id="About">
            <article>
                 Located across the street from Aquatic Park with breathtaking views of the San Francisco Bay,  
                 Black Point Cigar Club operates as an exclusive private cigar club and special event space. 
