@@ -21,14 +21,13 @@
 		outline-style: double;
 		font-size: 33px;
 		font-weight: 900;
-		top: 20px;
+		top: 0.9em;
 		width: 100%;
 		text-align: center;
 		background-color: rgba(153, 153, 153, 0.5);
 	}
-
 	.btnContainer {
-		width: 100%;
+		width: 97%;
 		justify-content: center;
 		flex-direction: row;
 		height: 35px;
@@ -42,33 +41,34 @@
 		font-weight: 600;
 		color: darkgray;
 		flex-grow: 1;
+		background: none;
+		border: none;
 	}
-
 	.photoSwipe {
 		font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 		font-size: 22px;
 		font-weight: 600;
 		color: darkgray;
 		flex-grow: 1;
+		background: none;
+		border: none;
 	}
-
 	.infoSwipe {
 		font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 		font-size: 22px;
 		font-weight: 600;
 		color: darkgray;
 		flex-grow: 1;
+		background: none;
+		border: none;
 	}
-
 	.about{
 		box-sizing: border-box;
-		margin-top: 14px;
-		margin-bottom: 14px;
-		margin-left: auto;
-		margin-right: auto;
-		padding: 8px;
+		margin: 14px auto;
+		
 		left: 0;
 		right: 0;
+		padding: 8px;
 		text-align: center;	
 		line-height: 200%;	
 		width: 89%;
@@ -79,10 +79,23 @@
 		outline:rgba(153, 153, 153, 1);
 		outline-style: double;
 	}
-
 	.footer {
 		height: 10px;
 		width: 100;
+	}
+	.photos{
+		display: none;
+		box-sizing: border-box;
+		margin: 14px auto;
+		padding: 8px;
+		width: 89%;
+		outline:rgba(153, 153, 153, 1);
+		outline-style: double;
+	}
+	.photo {
+		max-width: 100%;
+		box-sizing: border-box;
+    	height: auto;
 	}
 }
 
