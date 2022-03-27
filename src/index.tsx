@@ -8,16 +8,18 @@ import Info from "./components/info";
 import "./styles/main.css";
 
 let touchstartX = 0;
+let touchstartY = 0;
 let touchendX = 0;
+let touchendY = 0;
 
 const slider = document.getElementById('root')
 let selectedArr = ["about", "photo", "info"];
 let idx = 0;
 function handleGesture() {
-    if (touchendX -20 < touchstartX) {
+    if (touchendX < touchstartX && Math.abs(touchendY - touchstartY) < 10) {
         idx < selectedArr.length -1 ? idx++ : idx;
     }
-    if (touchendX +20 > touchstartX) {
+    if (touchendX > touchstartX && Math.abs(touchendY - touchstartY) < 10) {
         idx > 0 ? idx-- : idx;
     }
     let name = selectedArr[idx];
@@ -72,10 +74,12 @@ function handleGesture() {
 
 slider?.addEventListener('touchstart', e => {
   touchstartX = e.changedTouches[0].screenX
+  touchstartY = e.changedTouches[0].screenY
 })
 
 slider?.addEventListener('touchend', e => {
   touchendX = e.changedTouches[0].screenX
+  touchendY = e.changedTouches[0].screenY
   handleGesture()
 })
 
