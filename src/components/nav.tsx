@@ -1,6 +1,9 @@
 import React from "react";
 import NavImage from '../images/Black Point_SF Peninsula_Coast Survey_1869.png'
 interface Props {}
+interface State {
+    
+}
 class Nav extends React.Component {
     constructor(props: Props) {
         super(props)

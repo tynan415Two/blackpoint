@@ -83,7 +83,7 @@
 		height: 10px;
 		width: 100;
 	}
-	/* .photos{
+	.photos{
 		display: none;
 		box-sizing: border-box;
 		margin: 14px auto;
@@ -96,5 +96,5 @@
 		max-width: 100%;
 		box-sizing: border-box;
     	height: auto;
-	} */
+	}
 }
