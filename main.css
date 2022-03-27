@@ -39,7 +39,7 @@
 		font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 		font-size: 22px;
 		font-weight: 600;
-		color: darkgray;
+		color: rgb(224, 224, 224);
 		flex-grow: 1;
 		background: none;
 		border: none;
@@ -70,6 +70,21 @@
 		line-height: 200%;	
 		width: 89%;
 		font-size: 22px;
+		font-weight: 600;
+		font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+		color: rgba(153, 153, 153, 1);
+		outline:rgba(153, 153, 153, 1);
+		outline-style: double;
+	}
+	.info{
+		display: none;
+		box-sizing: border-box;
+		margin: 14px auto;
+		padding: 8px;
+		text-align: center;	
+		line-height: 200%;	
+		width: 89%;
+		font-size: 1em;
 		font-weight: 600;
 		font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 		color: rgba(153, 153, 153, 1);
