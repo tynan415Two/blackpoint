@@ -7,17 +7,17 @@ import Photos  from "./components/photos";
 import Info from "./components/info";
 import "./styles/main.css";
 
-let touchstartX = 0
-let touchendX = 0
+let touchstartX = 0;
+let touchendX = 0;
 
 const slider = document.getElementById('root')
 let selectedArr = ["about", "photo", "info"];
 let idx = 0;
 function handleGesture() {
-    if (touchendX < touchstartX) {
+    if (touchendX -20 < touchstartX) {
         idx < selectedArr.length -1 ? idx++ : idx;
     }
-    if (touchendX > touchstartX) {
+    if (touchendX +20 > touchstartX) {
         idx > 0 ? idx-- : idx;
     }
     let name = selectedArr[idx];
