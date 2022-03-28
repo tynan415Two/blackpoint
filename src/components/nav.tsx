@@ -11,7 +11,6 @@ const slider = document.getElementById('root')
 let selectedArr = ["about", "photo", "info"];
 let idx = 0;
 function handleGesture() {
-    console.log("handle", idx)
     if (touchendX < touchstartX + 15 && Math.abs(touchstartY - touchendY) < 15) {
         idx < selectedArr.length -1 ? idx++ : idx;
     }
@@ -78,8 +77,10 @@ slider?.addEventListener('touchstart', e => {
 slider?.addEventListener('touchend', e => {
   touchendX = e.changedTouches[0].screenX
   touchendY = e.changedTouches[0].screenY
-  console.log(touchstartX, touchendX)
-  if (e.targetTouches.length == 2) return
+  const targ = e.target as HTMLTextAreaElement
+//   console.log(e.targetTouches.length == 2)
+  if(e.targetTouches.length == 2) return
+  if (targ.id === "email") return
   if (touchstartX === touchendX || Math.abs(touchstartX - touchendX) < 25) return
   handleGesture()
 })
@@ -92,7 +93,6 @@ class Nav extends React.Component {
 
        if (name) {
             idx = selectedArr.indexOf(name);
-            console.log(selectedArr.indexOf(name))
 
             let ele = document.getElementById(name);
             let selChange = document.getElementById(name + "Swipe");
@@ -174,7 +174,7 @@ class Nav extends React.Component {
                 <h2>Membership</h2>
                 <p>Private memberships are available for $300/month.</p>
                 <h2>Contact</h2>
-                <p>blackpointcigarclub@gmail.com</p>
+                <p id="email">blackpointcigarclub@gmail.com</p>
             </section>
 
             <footer className="footer"></footer>
