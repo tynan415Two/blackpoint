@@ -69,6 +69,7 @@ function handleGesture() {
     
 }
 
+
 slider?.addEventListener('touchstart', e => {
   touchstartX = e.changedTouches[0].screenX
   touchstartY = e.changedTouches[0].screenY
@@ -78,6 +79,7 @@ slider?.addEventListener('touchend', e => {
   touchendX = e.changedTouches[0].screenX
   touchendY = e.changedTouches[0].screenY
   console.log(touchstartX, touchendX)
+  if (e.targetTouches.length == 2) return
   if (touchstartX === touchendX || Math.abs(touchstartX - touchendX) < 25) return
   handleGesture()
 })
