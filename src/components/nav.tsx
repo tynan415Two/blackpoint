@@ -78,7 +78,6 @@ slider?.addEventListener('touchend', e => {
   touchendX = e.changedTouches[0].screenX
   touchendY = e.changedTouches[0].screenY
   const targ = e.target as HTMLTextAreaElement
-//   console.log(e.targetTouches.length == 2)
   if(e.targetTouches.length == 2) return
   if (targ.id === "email") return
   if (touchstartX === touchendX || Math.abs(touchstartX - touchendX) < 25) return

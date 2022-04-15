@@ -1,4 +1,4 @@
-
+/* mobile styles */
 @media screen and (max-width: 800px) {
 	body {
 		background: #141414;
@@ -110,3 +110,4 @@
     	height: auto;
 	}
 }
+
