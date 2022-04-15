@@ -43,7 +43,7 @@
 		flex-grow: 1;
 		background: none;
 		border: none;
-		transition: all 1s linear;
+		transition: all 1s ease-in;
 	}
 	.photoSwipe {
 		font-family: -apple-system, BlinkMacSystemFont, sans-serif;
@@ -53,7 +53,7 @@
 		flex-grow: 1;
 		background: none;
 		border: none;
-		transition: all 1s linear;
+		transition: all 1s ease-in;
 	}
 	.infoSwipe {
 		font-family: -apple-system, BlinkMacSystemFont, sans-serif;
@@ -63,7 +63,7 @@
 		flex-grow: 1;
 		background: none;
 		border: none;
-		transition: all 1s linear;
+		transition: all 1s ease-in;
 	}
 	.about{
 		box-sizing: border-box;
@@ -79,7 +79,7 @@
 		outline:rgba(153, 153, 153, 1);
 		outline-style: double;
 		opacity: 1;
-		transition: all 1s linear;
+		transition: all 1s ease-in;
 	}
 	.info{
 		display: none;
@@ -96,7 +96,7 @@
 		outline:rgba(153, 153, 153, 1);
 		outline-style: double;
 		opacity: 0;
-		transition: all 1s linear;
+		transition: all 1s ease-in;
 	}
 	.footer {
 		height: 10px;
@@ -111,7 +111,7 @@
 		outline:rgba(153, 153, 153, 1);
 		outline-style: double;
 		opacity: 0;
-		transition: all 1s linear;
+		transition: all 1s ease-in;
 	}
 	.photo {
 		max-width: 100%;
