@@ -21,7 +21,6 @@ function handleGesture() {
     let name = selectedArr[idx];
     let ele = document.getElementById(name);
     let selChange = document.getElementById(name + "Swipe");
-    console.log(idx, idx > 0);
     if (ele !== null && selChange !== null) {
         let order = selectedArr.indexOf(current) < selectedArr.indexOf(name) ? "forward" : "backward";
 
