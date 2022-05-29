@@ -120,7 +120,7 @@
 	}
 }
 
-/* ---------------------------browers styles------------------------- */
+/* ---------------------------brower styles------------------------- */
 @media screen and (min-width: 1201px){
 	body {
 		background: #141414;
@@ -131,7 +131,7 @@
 	}	
 	.headerImg {
 		aspect-ratio: 3/1;
-		height: 28rem;
+		height: 24rem;
 		z-index: 0;
 		width: 100%;
 		padding: inherit;
@@ -143,7 +143,7 @@
 		color:black;
 		outline:black;
 		outline-style: double;
-		font-size: 8rem;
+		font-size: 6vw;
 		font-weight: 900;
 		top: 7rem;
 		left: 0.55rem;
@@ -196,16 +196,16 @@
 		width: 100;
 	}
 	.photos{
-		outline-style: double;
 		display: flex;
+		width: 95%;
 		box-sizing: border-box;
-		outline:rgba(153, 153, 153, 1);
-		outline-style: double;
 		height: fit-content;
 		flex-wrap: wrap;
+		margin-left: 2rem;
 	}	
 	.photo {	
-		max-width: 27rem;
-		margin: 0.3rem;
+		
+		max-width: 22vw;
+		margin: 0.3vw;
 	}
 }
