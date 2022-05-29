@@ -7,86 +7,40 @@ let touchstartY = 0;
 let touchendX = 0;
 let touchendY = 0;
 
-const slider = document.getElementById('root')
+const slider = document.getElementById('root');
 let selectedArr = ["about", "photo", "info"];
 let idx = 0;
 function handleGesture() {
+    let current = selectedArr[idx];
     if (touchendX < touchstartX + 15 && Math.abs(touchstartY - touchendY) < 15) {
         idx < selectedArr.length -1 ? idx++ : idx;
     }
     if (touchendX > touchstartX -15 && Math.abs(touchstartY - touchendY) < 15) {
         idx > 0 ? idx-- : idx;
-
     }
     let name = selectedArr[idx];
-    let ele = document.getElementById(name)
+    let ele = document.getElementById(name);
     let selChange = document.getElementById(name + "Swipe");
-            if (ele !== null && selChange !== null) {
-                ele.style.display = "block";
-                setTimeout(() => {
-                    ele.style.opacity = "1";
-                }, 10)
+    console.log(idx, idx > 0);
+    if (ele !== null && selChange !== null) {
+        let order = selectedArr.indexOf(current) < selectedArr.indexOf(name) ? "forward" : "backward";
 
-                selChange.style.color = "white"
-                if (name === "about") {
-                    let off1 = document.getElementById("photo")
-                    let colChange1 = document.getElementById("photoSwipe")
-                    if (off1 !== null && colChange1 !== null) {
-                        off1.style.display = "none";
-                        setTimeout(() => {
-                            off1.style.opacity = "0";
-                        }, 10)
-                        colChange1.style.color = "darkgray";
-                    }
-                    let off2 = document.getElementById("info")
-                    let colChange2 = document.getElementById("infoSwipe")
-                    if (off2 !== null && colChange2 !== null) {
-                        off2.style.display = "none";
-                        setTimeout(() => {
-                            off2.style.opacity = "0";
-                        }, 10)
-                        colChange2.style.color = "darkgray";
-                    }
-                } else if (name === "photo") {
-                    let off1 = document.getElementById("about")
-                    let colChange1 = document.getElementById("aboutSwipe")
-                    if (off1 !== null && colChange1 !== null) {
-                        off1.style.display = "none";
-                        setTimeout(() => {
-                            off1.style.opacity = "0";
-                        }, 10)
-                        colChange1.style.color = "darkgray";
-                    }
-                    let off2 = document.getElementById("info")
-                    let colChange2 = document.getElementById("infoSwipe")
-                    if (off2 !== null && colChange2 !== null) {
-                        off2.style.display = "none";
-                        setTimeout(() => {
-                            off2.style.opacity = "0";
-                        }, 10)
-                        colChange2.style.color = "darkgray";
-                    }
-                } else if(name === "info") {
-                    let off1 = document.getElementById("about")
-                    let colChange1 = document.getElementById("aboutSwipe")
-                    if (off1 !== null && colChange1 !== null) {
-                        off1.style.display = "none";
-                        setTimeout(() => {
-                            off1.style.opacity = "0";
-                        }, 10)
-                        colChange1.style.color = "darkgray";
-                    }
-                    let off2 = document.getElementById("photo")
-                    let colChange2 = document.getElementById("photoSwipe")
-                    if (off2 !== null && colChange2 !== null) {
-                        off2.style.display = "none";
-                        setTimeout(() => {
-                            off2.style.opacity = "0";
-                        }, 10)
-                        colChange2.style.color = "darkgray";
-                    }
-                }
-            }
+        ele.style.display = "block";
+        setTimeout(() => {
+            ele.style.opacity = "1";
+        }, 750)
+        selChange.style.color = "white"
+
+        let off1 =  document.getElementById(current);
+        let colChange1 = document.getElementById(current + "Swipe");
+        if (off1 !== null && colChange1 !== null) {
+            off1.style.opacity = "0";
+            setTimeout(() => {
+                off1.style.display = "none";
+            }, 501)
+            colChange1.style.color = "darkgray";
+        }
+    }
     
 }
 
@@ -111,8 +65,7 @@ class Nav extends React.Component {
         e.preventDefault();
         const button: HTMLButtonElement = e.currentTarget;
         let name = button.textContent?.toLowerCase().replace('s', '');
-
-       if (name) {
+        if (name) {
             idx = selectedArr.indexOf(name);
 
             let ele = document.getElementById(name);
@@ -121,63 +74,63 @@ class Nav extends React.Component {
                 ele.style.display = "block";
                 setTimeout(() => {
                     ele.style.opacity = "1";
-                }, 10)
+                }, 502)
                 selChange.style.color = "white"
                 if (name === "about") {
                     let off1 = document.getElementById("photo")
                     let colChange1 = document.getElementById("photoSwipe")
                     if (off1 !== null && colChange1 !== null) {
-                        off1.style.display = "none";
+                        off1.style.opacity = "0";
                         setTimeout(() => {
-                            off1.style.opacity = "0";
-                        }, 10)
+                            off1.style.display = "none";
+                        }, 501)
                         colChange1.style.color = "darkgray";
                     }
                     let off2 = document.getElementById("info")
                     let colChange2 = document.getElementById("infoSwipe")
                     if (off2 !== null && colChange2 !== null) {
-                        off2.style.display = "none";
+                        off2.style.opacity = "0";
                         setTimeout(() => {
-                            off2.style.opacity = "0";
-                        }, 10)
+                            off2.style.display = "none";
+                        }, 501)
                         colChange2.style.color = "darkgray";
                     }
                 } else if (name === "photo") {
                     let off1 = document.getElementById("about")
                     let colChange1 = document.getElementById("aboutSwipe")
                     if (off1 !== null && colChange1 !== null) {
-                        off1.style.display = "none";
+                        off1.style.opacity = "0";
                         setTimeout(() => {
-                            off1.style.opacity = "0";
-                        }, 10)
+                            off1.style.display = "none";
+                        }, 501)
                         colChange1.style.color = "darkgray";
                     }
                     let off2 = document.getElementById("info")
                     let colChange2 = document.getElementById("infoSwipe")
                     if (off2 !== null && colChange2 !== null) {
-                        off2.style.display = "none";
+                        off2.style.opacity = "0";
                         setTimeout(() => {
-                            off2.style.opacity = "0";
-                        }, 10)
+                            off2.style.display = "none";
+                        }, 501)
                         colChange2.style.color = "darkgray";
                     }
                 } else if(name === "info") {
                     let off1 = document.getElementById("about")
                     let colChange1 = document.getElementById("aboutSwipe")
                     if (off1 !== null && colChange1 !== null) {
-                        off1.style.display = "none";
+                        off1.style.opacity = "0";
                         setTimeout(() => {
-                            off1.style.opacity = "0";
-                        }, 10)
+                            off1.style.display = "none";
+                        }, 501)
                         colChange1.style.color = "darkgray";
                     }
                     let off2 = document.getElementById("photo")
                     let colChange2 = document.getElementById("photoSwipe")
                     if (off2 !== null && colChange2 !== null) {
-                        off2.style.display = "none";
+                        off2.style.opacity = "0";
                         setTimeout(() => {
-                            off2.style.opacity = "0";
-                        }, 10)
+                            off2.style.display = "none";
+                        }, 501)
                         colChange2.style.color = "darkgray";
                     }
                 }
@@ -190,7 +143,7 @@ class Nav extends React.Component {
         <div>
             <nav className="nav">
                 <img src={NavImage} className="headerImg" ></img>
-                <h1 className="title">Blackpoint Cigar Club</h1>
+                <h1 className="title">Black Point Cigar Club</h1>
                 <div className="btnContainer">
                     <button className="aboutSwipe" id="aboutSwipe" onClick={this.handleClick}>About</button>
                     <button className="photoSwipe" id="photoSwipe" onClick={this.handleClick}>Photos</button>

@@ -14,7 +14,6 @@ import bp13 from '../../images/photos/bp13.jpg';
 import bp14 from '../../images/photos/bp14.jpg';
 import bp15 from '../../images/photos/bp15.jpg';
 import bp16 from '../../images/photos/bp16.jpg';
-import bp17 from '../../images/photos/bp17.jpg';
 import bp18 from '../../images/photos/bp18.jpg';
 import bp19 from '../../images/photos/bp19.jpg';
 import bp20 from '../../images/photos/bp20.jpg';
@@ -37,7 +36,6 @@ const photosArr = [
     bp14,
     bp15,
     bp16,
-    bp17,
     bp18,
     bp19,
     bp20,
